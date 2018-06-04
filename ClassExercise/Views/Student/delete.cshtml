@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>delete</title>
+</head>
+<body>
+    <div> 
+        Are you sure you want to delete the following data?
+        <span>Student Id: </span><span>@ViewBag.studentdelete.StudentId</span><br/>
+        <span>Student Name: </span><span>@ViewBag.studentdelete.StudentName</span><br />
+        <span>Gender: </span><span>@ViewBag.studentdelete.Gender</span><br />
+        <span>Subject: </span><span>@ViewBag.studentdelete.Subject</span><br />
+        <span>Fee: </span><span>@ViewBag.studentdelete.Fee</span><br />
+        <form action="/student/delete/@ViewBag.studentdelete.StudentId" method="post">
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+</body>
+</html>

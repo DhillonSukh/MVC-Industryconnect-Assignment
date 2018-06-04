@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>create</title>
+    <style>
+        body{
+            background-color: #C9CBD5;
+            margin:0;
+        }
+        .card{
+            box-shadow: 2px 2px 7px #000000;
+            margin: 20px;
+            width: 70vw;
+            background-color: #C9CBD5;
+            padding: 20px;
+        }
+        h2{
+            color: #328041;
+            text-align: center;
+        }
+        .labels{
+            margin: 10px;
+            color: #328041;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card"> 
+        <h2>Enter record of new Student</h2>
+        <form action="/student/create" method="post">
+            <span class="labels">Student Id: </span><input type="text" name="StudentId" /><br />
+            <span class="labels">Student Name: </span><input type="text" name="StudentName" /><br />
+            <span class="labels">Gender: </span></span><input type="text" name="Gender" /><br />
+            <span class="labels">Subject: </span><input type="text" name="Subject" /><br />
+            <span class="labels">Fee: </span><input type="text" name="Fee" /><br />
+            <input type="submit" value="create"/>
+        </form>
+        
+    </div>
+</body>
+</html>

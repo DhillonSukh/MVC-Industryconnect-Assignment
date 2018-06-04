@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>update</title>
+</head>
+<body>
+    <div> 
+        <form action="/student/update/@ViewBag.studentupdate.StudentId" method="post">
+            <span>Student Id: </span><input type="text" name="StudentId" value=@ViewBag.studentupdate.StudentId /><br />
+            <span>Student Name: </span><input type="text" name="StudentName" value=@ViewBag.studentupdate.StudentName /><br />
+            <span>Gender : </span><input type="text" name="Gender" value=@ViewBag.studentupdate.Gender /><br />
+            <span>Subject : </span><input type="text" name="Subject" value=@ViewBag.studentupdate.Subject /><br />
+            <span>Fee: </span><input type="text" name="Fee" value=@ViewBag.studentupdate.Fee /><br />
+            <input type="submit" value="update" />
+        </form>
+    </div>
+</body>
+</html>

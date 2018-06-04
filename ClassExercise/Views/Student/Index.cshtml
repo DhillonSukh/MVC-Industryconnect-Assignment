@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        body{
+            background-color: #C9CBD5;
+            margin:0;
+        }
+        .nav-bar a{
+            float: left;
+            text-decoration: none;
+            margin: 10px 20px 20px 0;
+            padding: 15px;
+            background-color: #328041;
+            color: #C9CBD5;
+            font-size: 18px;
+        }
+        .nav-bar{
+            background-color: #328041;
+            width: 100vw;
+            height: 10vh;
+            margin: 0;
+        }
+
+        .nav-bar a:hover{
+          background-color: #C9CBD5;
+          color: #328041;  
+           border: 2px solid #328041;
+        }
+        .card{
+            box-shadow: 2px 2px 7px #000000;
+            margin: 20px;
+            width: 70vw;
+            background-color: #C9CBD5;
+            padding: 20px;
+        }
+        .labels{
+            margin: 10px;
+            color: #328041;
+            font-size: 20px;
+        }
+        .head{
+            color: #328041;
+            text-align: center;
+        }
+        .links{
+            text-decoration: none;
+            background-color: #328041;
+            color: #C9CBD5;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="nav-bar">
+            <a href="/student/index">Home</a>
+            <a href="/student/create">Create</a>
+        </ul>
+        <div>
+            <h2 class="head">Student Details</h2>
+            @foreach (var item in ViewBag.student)
+            {
+                <div class="card col-md-4">
+                    <span class="labels">Student Id: </span><span>@item.StudentId</span><br />
+                    <span class="labels">Student Name: </span><span>@item.StudentName</span><br />
+                    <span class="labels">Gender: </span><span>@item.Gender</span><br />
+                    <span class="labels">Subject: </span><span>@item.Subject</span><br />
+                    <span class="labels">Fee: </span><span>@item.Fee</span><br /><br/><br/>
+                    <a class="links" href="/student/update/@item.StudentId">Edit</a>
+                    <a class="links" href="/student/delete/@item.StudentId">Delete</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+</html>
